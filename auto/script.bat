@@ -6,4 +6,3 @@ git add *
 git commit -m "arregle algo"
 
 git push origin master
-cmd
