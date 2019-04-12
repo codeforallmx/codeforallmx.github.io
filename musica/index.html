@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="range" id="volumen" value="100">
+
+<button onclick="play()">Play</button>
+
+<script type="text/javascript">
+var cancion=null;
+var estado;
+var ruta1=	'track/quiero.mp3';
+var ruta2=	'track/fue.mp3';
+
+init();
+
+
+function init(){
+	localStorage.setItem('ruta',ruta1);
+}
+
+
+function play(ruta=null){
+	if (ruta==null) {//no mando ruta
+
+		if (cancion==null) {
+			var ruta=localStorage.getItem('ruta');
+			play(ruta);
+		}else if (estado=='play') {
+			cancion.pause();
+			estado='pause';
+		}else{	
+			cancion.play();
+			estado='play';
+		}
+	}else{ //mando ruta
+		if (cancion) {
+			cancion.pause();
+			cancion.src="";
+		}
+		cancion = new Audio(ruta);
+	 	cancion.play(); 	
+	 	estado='play';
+	 	localStorage.setItem('ruta',ruta);
+	}
+}
+
+var $volumen= document.querySelector("#volumen");
+$volumen.addEventListener("change",function(e){
+	cancion.volume=$volumen.value/100;
+	localStorage.setItem('ruta',cancion.volume);
+	console.log(cancion.volume);
+});
+
+
+</script>
+</body>
+</html>
