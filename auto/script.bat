@@ -7,3 +7,4 @@ git add *
 git commit -m "arregle algo"
 
 git push -u orgin master
+cmd
