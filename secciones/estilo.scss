@@ -1,0 +1,12 @@
+@import "_mixins.scss";
+.ds_galeria1{
+  width: 100%;
+  .container{
+    @include flex(row,wrap,);
+    .imagen{
+      @include imagen('',cover);
+      height: 200px;
+      width: 300px;
+    }
+  }
+}

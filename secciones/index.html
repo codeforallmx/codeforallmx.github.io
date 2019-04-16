@@ -2,11 +2,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Title of the document</title>
+<title></title>
+<link rel="stylesheet" href="estilo.min.css">
 </head>
 
 <body>
-Content of the document......
+<section class="ds_galeria1">
+  <div class="container">
+      <div class="imagen" style="background-image:url('http://oxigeno.bold-themes.com/soccer/wp-content/uploads/sites/3/2017/11/gallery_02-1280x800.jpg')"></div>
+      <div class="imagen" style="background-image:url('http://oxigeno.bold-themes.com/soccer/wp-content/uploads/sites/3/2017/11/gallery_02-1280x800.jpg')"></div>
+      <div class="imagen" style="background-image:url('http://oxigeno.bold-themes.com/soccer/wp-content/uploads/sites/3/2017/11/gallery_02-1280x800.jpg')"></div>
+
+      <div class="imagen" style="background-image:url('http://oxigeno.bold-themes.com/soccer/wp-content/uploads/sites/3/2017/11/gallery_02-1280x800.jpg')"></div>
+      <div class="imagen" style="background-image:url('http://oxigeno.bold-themes.com/soccer/wp-content/uploads/sites/3/2017/11/gallery_02-1280x800.jpg')"></div>
+      <div class="imagen" style="background-image:url('http://oxigeno.bold-themes.com/soccer/wp-content/uploads/sites/3/2017/11/gallery_02-1280x800.jpg')"></div>
+
+  </div>
+</section>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>
+  $('.ds_galeria1').each(function(index, el) {
+    var cantidad=$(el).find('.imagen').length;
+    console.log(cantidad);
+  });
+
+</script>
 </body>
 
 </html>
